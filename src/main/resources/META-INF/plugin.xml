@@ -1,0 +1,37 @@
+<idea-plugin>
+    <id>com.claude.persona</id>
+    <name>Claude Persona</name>
+    <vendor email="support@example.com" url="https://example.com">Claude Persona</vendor>
+
+    <description><![CDATA[
+    为Claude Code添加趣味交互人设，让AI编程更加有趣！
+    支持31个来自经典文学作品的CP角色，每月随机或手动切换。
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Claude Persona"
+                    secondary="true"
+                    icon="/META-INF/pluginIcon.svg"
+                    anchor="right"
+                    factoryClass="com.claude.persona.ui.PersonaToolWindowFactory"/>
+        <applicationConfigurable
+                parentId="tools"
+                instance="com.claude.persona.settings.PersonaSettingsConfigurable"
+                id="com.claude.persona.settings.PersonaSettingsConfigurable"
+                displayName="Claude Persona"/>
+        <applicationService serviceImplementation="com.claude.persona.settings.PersonaSettings"/>
+        <applicationService serviceImplementation="com.claude.persona.service.PersonaService"/>
+        <notificationGroup id="Claude Persona" displayType="BALLOON"/>
+    </extensions>
+
+    <actions>
+        <action id="RandomPersona"
+                class="com.claude.persona.actions.RandomPersonaAction"
+                text="随机切换人设"
+                icon="/META-INF/pluginIcon.svg">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
