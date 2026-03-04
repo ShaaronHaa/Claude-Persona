@@ -155,7 +155,7 @@
 
 然后我就写了一个需求（md），然后cc就给我出方案了，然后cc就帮我实现了。
 
-如果愿意尝试，附上我的github链接：https://github.com/ShaaronHaa/Claude-Persona/tree/person_31cps
+如果愿意尝试，附上我的github链接：https://github.com/ShaaronHaa/Claude-Persona/blob/persona_couples/doc/%E8%BE%B9%E5%86%99%E4%BB%A3%E7%A0%81%E8%BE%B9%E5%97%91cp.md
 
 如果没有尝试的想法，也愿能博君一笑，心生温暖。
 
